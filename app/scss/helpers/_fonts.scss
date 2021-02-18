@@ -4,10 +4,11 @@
     src: url(#{'../fonts/'+$filename+'.eot'});
     src: local('😥'),
     url(#{'../fonts/'+$filename+'.woff'}) format("woff"),
+    url(#{'../fonts/'+$filename+'.woff2'}) format("woff2"),
     url(#{'../fonts/'+$filename+'.ttf'}) format("truetype");
     font-weight: $fontweight;
     font-style: $fontstyle;
   }
 }
 
-@include font(fontello, fontello, 400, normal);
+@include font('fontello', fontello, 400, normal);

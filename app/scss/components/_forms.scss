@@ -9,6 +9,13 @@
     width: 36px;
     border: none;
     background-color: transparent;
+
+    &:after {
+      content: '\e812';
+      font-family: 'fontello';
+      position: absolute;
+
+    }
   }
 }
 
