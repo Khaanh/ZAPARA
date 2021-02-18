@@ -120,3 +120,16 @@
 
   &.is-open {}
 }
+
+.icon-icon-arrow-left {
+  position: relative;
+
+  &:after {
+    content: '\e801';
+    font-family: "fontello";
+    display: block;
+    font-size: 24px;
+    color: red;
+
+  }
+}
