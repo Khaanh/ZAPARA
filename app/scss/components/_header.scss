@@ -135,4 +135,42 @@
   }
 }
 
-.shop-holder {}
+.shop-holder {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  position: relative;
+}
+
+.icon-shop {
+
+  &:hover {
+    @media only screen and (min-width: 1025px) {
+      &:before {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &:before {
+    font-size: 21px;
+    opacity: 1;
+    transition: 0.2s ease;
+  }
+}
+
+.counter {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  display: inline-block;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 10px;
+  background-color: #000;
+  text-align: center;
+  font-size: 8px;
+  line-height: 16px;
+  padding: 0 5px;
+  color: #fff;
+}
