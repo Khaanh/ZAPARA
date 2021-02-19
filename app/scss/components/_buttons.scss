@@ -4,15 +4,16 @@
   line-height: $btn-lh;
   font-weight: $btn-fw;
   color: $btn-color;
-  border: 1px solid $transp;
+  border: 2px solid $text;
   background-color: $btn-bgc;
   border-radius: $btn-radius;
+  position: relative;
 
-  box-shadow: 3px 5px 30px 4px #cbd6ee;
-  padding: 16px 14px;
+  box-shadow: none;
+  padding: 7px 14px;
   text-align: center;
 
-  min-width: 100px;
+  min-width: 140px;
   display: inline-block;
   white-space: nowrap;
   vertical-align: middle;
@@ -21,10 +22,43 @@
   outline: none;
   appearance: none;
   background-origin: border-box;
-  transition: 0.3s ease;
+  transition: 0.3s ease-out;
+
   &:hover {
+
+    &:after,
+    &:before {
+      width: calc(100% + 4px);
+      height: calc(100% + 2px);
+      transition: width 0.3s ease-in-out, height 0.9s ease-in-out;
+    }
   }
+
   &:focus {}
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+  }
+
+  &:after {
+    top: -2px;
+    left: -2px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    width: 0;
+    height: 0;
+  }
+
+  &:before {
+    bottom: -2px;
+    right: -2px;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    width: 0;
+    height: 0;
+  }
 }
 
 button[disabled] {
