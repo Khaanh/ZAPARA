@@ -121,20 +121,6 @@
   &.is-open {}
 }
 
-.icon-arrow-left {
-  position: relative;
-
-  &:after {
-    content: '\e801';
-    font-family: "fontello";
-    font-style: normal;
-    display: block;
-    font-size: 24px;
-    color: red;
-    font-weight: 700;
-  }
-}
-
 .shop-holder {
   display: inline-block;
   color: #000;

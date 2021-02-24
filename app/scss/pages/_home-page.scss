@@ -361,6 +361,7 @@
   }
 
   &__caption {
+    display: inline-block;
     font-size: 75px;
     line-height: 90px;
     font-weight: 800;
@@ -378,18 +379,83 @@
 }
 
 .reviews-slider {
+  position: relative;
+
+  &__navigation {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    z-index: 60;
+    display: flex;
+
+    .slick-arrow {
+      height: 50px;
+      width: 50px;
+      border: 1px solid #f4f2f3;
+
+      &:hover {
+        @media only screen and (min-width: 1025px) {
+          border: 1px solid #ccc;
+
+          &.icon-arrow-left {
+            &:before {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+
+      &.slick-next {
+        transform: rotate(180deg);
+        // border-right: none;
+      }
+
+      &.icon-arrow-left {
+        &:before {
+          font-size: 20px;
+          color: #000;
+          font-weight: 900;
+          opacity: 1;
+          transition: 0.2s ease;
+        }
+      }
+    }
+  }
+
+  &__holder {
+    .slick-active {
+      .reviews-slider__line {
+        height: 382px;
+      }
+
+      .reviews-slider__link {
+        transform: translate(-12px, -20%);
+      }
+
+      .reviews-slider__inner {}
+    }
+  }
 
   &__items {}
 
   &__wrapper {
     display: flex;
+    justify-content: flex-end;
   }
 
   &__social {
-    height: 382px;
-    border-left: 1px solid $text;
     position: relative;
     margin-right: 28px;
+  }
+
+  &__line {
+    height: 0;
+    border-left: 1px solid $text;
+    position: relative;
+    margin-top: 44px;
+    display: block;
+    transition: height 0.9s linear;
+
   }
 
   &__link {
@@ -401,20 +467,65 @@
     position: absolute;
     left: 0;
     bottom: 0;
+    transform: translate(-12px, 120%);
+    transition-delay: 0.9s;
+    transition-duration: 0.5s;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
   }
 
   &__inner {
     background-color: #fff;
     max-width: 590px;
+    min-height: 556px;
+    padding: 60px 34px 46px 60px;
+    font-size: 18px;
+    line-height: 24px;
   }
 
-  &__personal {}
+  &__personal {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 70px;
+  }
 
-  &__avatar {}
+  &__avatar {
+    display: block;
+    max-width: 154px;
+    height: 154px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-right: 36px;
+  }
 
-  &__info {}
+  &__info {
+
+    span {
+      font-size: 24px;
+      line-height: 26px;
+    }
+
+    small {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .icon-star {
+      margin-right: 6px;
+
+      &:before {
+        margin: 0;
+      }
+    }
+  }
+
+  &__rating {
+    display: flex;
+  }
 
   &__txt {}
+
 }
 
 .icon-star {
