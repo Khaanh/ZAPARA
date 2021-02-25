@@ -10,7 +10,12 @@
       <section class="hero">
         <div class="hero__container container">
 
-          <div class="hero__wrap">
+          <div class="hero__wrap" id="js-textAnimate">
+            <div class="hero__animate">
+              <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="./img/symbol-defs.svg#brand-animate" />
+              </svg>
+            </div>
             <div class="hero__slider" id="js-heroSlider">
               <div class="hero__items">
                 <div class="hero__inner">
@@ -20,12 +25,6 @@
                     <a href="#" class="default-link">В каталог</a>
                   </div>
                   <div class="hero__inner">
-                    <div class="hero__animate">
-                      <svg>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                          xlink:href="./img/symbol-defs.svg#brand-animate" />
-                      </svg>
-                    </div>
                     <div class="hero__illustr">
                       <picture>
                         <source srcset="./img/hero-illustr.webp" type="image/webp">
@@ -44,12 +43,6 @@
                     <a href="#" class="default-link">В каталог</a>
                   </div>
                   <div class="hero__inner">
-                    <div class="hero__animate">
-                      <svg>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                          xlink:href="./img/symbol-defs.svg#brand-animate" />
-                      </svg>
-                    </div>
                     <div class="hero__illustr">
                       <picture>
                         <source srcset="./img/hero-illustr.webp" type="image/webp">
@@ -68,12 +61,6 @@
                     <a href="#" class="default-link">В каталог</a>
                   </div>
                   <div class="hero__inner">
-                    <div class="hero__animate">
-                      <svg>
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                          xlink:href="./img/symbol-defs.svg#brand-animate" />
-                      </svg>
-                    </div>
                     <div class="hero__illustr">
                       <picture>
                         <source srcset="./img/hero-illustr.webp" type="image/webp">
@@ -201,7 +188,7 @@
       </section>
 
       <section class="reviews-block">
-        <div class="container">
+        <div class="container reviews-block__container">
           <div class="reviews-block__content">
             <strong class="reviews-block__caption">отзывы</strong>
             <div class="reviews-block__subtitle">Вот что <br> говорят</div>
@@ -215,7 +202,45 @@
                 <div class="reviews-slider__wrapper">
                   <div class="reviews-slider__social">
                     <i class="reviews-slider__line"></i>
-                    <a href="#" class="reviews-slider__link" data-color="#1877f2">Facebook</a>
+                    <a href="#" class="reviews-slider__link link-inst">Instagram</a>
+                  </div>
+                  <div class="reviews-slider__inner">
+                    <div class="reviews-slider__personal">
+                      <i class="reviews-slider__avatar">
+                        <img src="./img/author-pic.jpg" alt="avatar" width="154" height="154">
+                      </i>
+                      <div class="reviews-slider__info">
+                        <span>Ольга Маримон</span>
+                        <br>
+                        <small>Aviator, Кемерово</small>
+                        <div class="reviews-slider__rating">
+                          <i class="icon-star"></i>
+                          <i class="icon-star"></i>
+                          <i class="icon-star"></i>
+                          <i class="icon-star"></i>
+                          <i class="icon-star"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reviews-slider__txt">
+                      <p>Спасибо большое вашей команде! Определенно, показали высокий профессионализм! Мы
+                        остались
+                        довольны! Работать с вами было комфортно - вопросы решались оперативно, цвет
+                        фартука
+                        "в точку"!
+                        Все быстро и качественно! Несомненно, для последующих заказов, обращусь именно к
+                        вам!!!
+                        !</p>
+                      <p>Спасибо!!!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews-slider__items">
+                <div class="reviews-slider__wrapper">
+                  <div class="reviews-slider__social">
+                    <i class="reviews-slider__line"></i>
+                    <a href="#" class="reviews-slider__link link-fb" data-color="#1877f2">Facebook</a>
                   </div>
                   <div class="reviews-slider__inner">
                     <div class="reviews-slider__personal">
@@ -249,7 +274,7 @@
                 <div class="reviews-slider__wrapper">
                   <div class="reviews-slider__social">
                     <i class="reviews-slider__line"></i>
-                    <a href="#" class="reviews-slider__link">Instagram</a>
+                    <a href="#" class="reviews-slider__link link-inst">Instagram</a>
                   </div>
                   <div class="reviews-slider__inner">
                     <div class="reviews-slider__personal">
@@ -286,7 +311,7 @@
                 <div class="reviews-slider__wrapper">
                   <div class="reviews-slider__social">
                     <i class="reviews-slider__line"></i>
-                    <a href="#" class="reviews-slider__link">Facebook</a>
+                    <a href="#" class="reviews-slider__link link-fb">Facebook</a>
                   </div>
                   <div class="reviews-slider__inner">
                     <div class="reviews-slider__personal">
@@ -321,6 +346,55 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="completed-works">
+        <div class="container">
+          <h1 class="completed-works__title">Галерея выполненных работ</h1>
+          <ul class="completed-works__gallery">
+            <li>
+              <img src="./img/gallery-01.jpg" alt="pic" width="387" height="310">
+            </li>
+            <li>
+              <img src="./img/gallery-02.jpg" alt="pic" width="387" height="310">
+            </li>
+            <li>
+              <img src="./img/gallery-03.jpg" alt="pic" width="387" height="310">
+            </li>
+            <li>
+              <img src="./img/gallery-04.jpg" alt="pic" width="387" height="310">
+            </li>
+            <li>
+              <img src="./img/gallery-05.jpg" alt="pic" width="387" height="310">
+            </li>
+            <li>
+              <img src="./img/gallery-06.jpg" alt="pic" width="387" height="310">
+            </li>
+            <li>
+              <img src="./img/gallery-07.jpg" alt="pic" width="387" height="310">
+            </li>
+            <li>
+              <img src="./img/gallery-08.jpg" alt="pic" width="387" height="310">
+            </li>
+            <li>
+              <img src="./img/gallery-09.jpg" alt="pic" width="387" height="310">
+            </li>
+            <li>
+              <img src="./img/gallery-010.jpg" alt="pic" width="387" height="310">
+            </li>
+            <li>
+              <img src="./img/gallery-011.jpg" alt="pic" width="387" height="310">
+            </li>
+            <li>
+              <img src="./img/gallery-012.jpg" alt="pic" width="387" height="310">
+            </li>
+          </ul>
+
+          <button type="button" class="btn-more">еще
+            <i class="dots">...</i>
+            <i class="icon-reload"></i>
+          </button>
         </div>
       </section>
 
