@@ -6,12 +6,23 @@ $(function () {
 let animate = document.querySelector('#js-textAnimate');
 let target;
 
-animate.onmouseenter = function (e) {
-	target = e;
-	target.toElement.children[0].classList.add('is-scale')
+animate.onmouseout = function (e) {
+	let a = e.target;
 }
 
-animate.onmouseleave = function (e) {
-	target.toElement.children[0].classList.remove('is-scale')
+animate.onmouseover = function (e) {
+	let a = e.target;
 }
 
+function openMenu() {
+	let mobileMenu = document.querySelector('#js-mobileMenu');
+	let navigation = document.querySelector('#js-navigation');
+	let body = document.querySelector('body');
+
+	mobileMenu.onclick = function () {
+		this.classList.toggle('is-open');
+		navigation.classList.toggle('is-show');
+		body.classList.toggle('js-no-scroll')
+	}
+}
+openMenu();

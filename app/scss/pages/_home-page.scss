@@ -123,6 +123,7 @@
   // min-height: 100vh;
   // height: auto;
   height: 100vh;
+  position: relative;
 
   >.container {
     height: 100%;
@@ -195,6 +196,7 @@
   &.absolute-center {
     right: 50%;
     transform: translate(50%, -50%);
+    z-index: 300;
   }
 }
 

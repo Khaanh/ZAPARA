@@ -1,5 +1,108 @@
 .footer {
-  .container {}
+  padding: 92px 0;
+  background-color: rgba(0, 0, 0, 0.17);
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    .logo {
+      margin: 0;
+      font-size: 40px;
+      line-height: 48px;
+    }
+  }
+
+  &__nav {
+    margin-bottom: 90px;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+
+      li {
+        margin: 0 20px;
+
+        a {
+          font-size: 24px;
+          line-height: 28px;
+          font-weight: 500;
+          color: #000;
+          text-decoration: none;
+          padding: 2px 4px;
+        }
+      }
+    }
+  }
+}
+
+.soc {
+  display: flex;
+  list-style: none;
+  display: flex;
+
+  li {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    border: 1px solid #7f7f7f;
+    margin-left: 28px;
+    overflow: hidden;
+
+    &:first-child {
+      margin: 0;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      text-decoration: none;
+      color: #7f7f7f;
+
+      >i {
+        color: #7f7f7f;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:before {
+          width: auto;
+        }
+
+        &.icon-vk {
+          &:before {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.icon-fb {}
+
+.icon-vk {}
+
+.icon-inst {}
+
+.privacy-policy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 300;
+  color: $text;
 }
 
 // Develop
