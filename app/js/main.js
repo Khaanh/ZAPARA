@@ -3,17 +3,6 @@ $(function () {
 	//= include/sliders
 });
 
-let animate = document.querySelector('#js-textAnimate');
-let target;
-
-animate.onmouseout = function (e) {
-	let a = e.target;
-}
-
-animate.onmouseover = function (e) {
-	let a = e.target;
-}
-
 function openMenu() {
 	let mobileMenu = document.querySelector('#js-mobileMenu');
 	let navigation = document.querySelector('#js-navigation');

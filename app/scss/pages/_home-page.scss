@@ -79,6 +79,42 @@
   &__illustr {
     position: relative;
   }
+
+  .slick-counter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 24px;
+    line-height: 30px;
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+
+  }
+
+  .current {
+    color: $text;
+  }
+
+  .total {
+    color: $white;
+  }
+
+  .slider-progress {
+    width: 120px;
+    height: 1px;
+    background: $black;
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slider-progress .progress {
+    width: 0%;
+    height: 1px;
+    background: $white;
+    position: absolute;
+  }
 }
 
 .default-link {
