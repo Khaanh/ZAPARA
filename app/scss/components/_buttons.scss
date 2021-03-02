@@ -37,7 +37,6 @@
     }
   }
 
-
   &:focus {}
 
   &:after,
@@ -97,6 +96,14 @@
       border-left: 2px solid #000;
       width: 0;
       height: 0;
+    }
+  }
+
+  &._dark-color {
+    &:hover {
+      @media only screen and (min-width: 1025px) {
+        color: #000;
+      }
     }
   }
 }
