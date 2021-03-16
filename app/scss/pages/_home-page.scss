@@ -705,11 +705,39 @@
     list-style: none;
     margin-bottom: 80px;
 
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 32px;
+    }
+
     li {
       flex: 1 1 calc(33.333% - 20px);
       margin: 10px;
       height: 310px;
       overflow: hidden;
+      transition: all 0.5s ease-in-out;
+
+      @media only screen and (max-width: 768px) {
+        flex: 1 1 calc(50% - 10px);
+        margin: 5px;
+      }
+
+      @media only screen and (max-width: 480px) {
+        flex: 1 1 auto;
+        text-align: center;
+      }
+
+      >img {
+        @media only screen and (max-width: 480px) {
+          width: 100%;
+        }
+      }
+
+      &:not(li:first-child)+li {
+        @media only screen and (max-width: 480px) {
+          height: 0;
+          transition: all 0.5s ease-in-out;
+        }
+      }
 
       &:hover {
         @media only screen and (min-width: 1025px) {

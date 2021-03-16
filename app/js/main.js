@@ -15,3 +15,17 @@ function openMenu() {
 	}
 }
 openMenu();
+
+
+let listGallery = document.querySelector('#js-listGallery').children;
+let btnLoadMore = document.querySelector('#js-btnLoadMore');
+
+let count = 1;
+btnLoadMore.addEventListener('click', showImg);
+
+function showImg() {
+	listGallery[count].nextElementSibling.style.height = '310px';
+	count++;
+	listGallery[count].nextElementSibling.style.height = '310px'
+	count++;
+}
