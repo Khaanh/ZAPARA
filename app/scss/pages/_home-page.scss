@@ -179,6 +179,10 @@
   height: 100vh;
   position: relative;
 
+  @media only screen and (max-width: 768px) {
+    background-size: auto;
+  }
+
   >.container {
     height: 100%;
     position: relative;

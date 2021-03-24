@@ -35,6 +35,7 @@ function openMobileGallery() {
 			if (item.id === 'lastGalleryItems') {
 				btnLoadMore.removeEventListener('click', showImg);
 				btnLoadMore.addEventListener('click', hideImg);
+				btnLoadMore.textContent = btnLoadMore.getAttribute('data-after');
 			}
 		})
 		count += 2;
@@ -43,6 +44,9 @@ function openMobileGallery() {
 	function hideImg() {
 		let newArr = arrayList.slice(2, arrayList.length);
 		
+		btnLoadMore.addEventListener('click', showImg);
+		btnLoadMore.textContent = btnLoadMore.getAttribute('data-before');
+
 		newArr.forEach( item => {
 			item.style.height = 0;
 		})
