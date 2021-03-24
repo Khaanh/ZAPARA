@@ -41,6 +41,3 @@ $('.nav > ul > li > a').on('click', function () {
 	}
 	return false;
 });
-
-
-console.log('asdasdas');

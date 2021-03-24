@@ -7,7 +7,7 @@ function openMenu() {
 	let mobileMenu = document.querySelector('#js-mobileMenu');
 	let navigation = document.querySelector('#js-navigation');
 	let body = document.querySelector('body');
-
+	
 	mobileMenu.onclick = function () {
 		this.classList.toggle('is-open');
 		navigation.classList.toggle('is-show');
@@ -17,15 +17,40 @@ function openMenu() {
 openMenu();
 
 
-let listGallery = document.querySelector('#js-listGallery').children;
-let btnLoadMore = document.querySelector('#js-btnLoadMore');
+function openMobileGallery() {
+	
+	let listGallery = document.querySelector('#js-listGallery').children;
+	let btnLoadMore = document.querySelector('#js-btnLoadMore');
+	let arrayList = Array.from(listGallery);
+	let count = 4;
+	
+	btnLoadMore.addEventListener('click', showImg);
+	
+	function showImg() {
+		let newArr =  arrayList.slice(2, count);
+		
+		newArr.forEach( item => {
+			item.style.height = '310px'
+			
+			if (item.id === 'lastGalleryItems') {
+				btnLoadMore.removeEventListener('click', showImg);
+				btnLoadMore.addEventListener('click', hideImg);
+			}
+		})
+		count += 2;
+	}
+	
+	function hideImg() {
+		let newArr = arrayList.slice(2, arrayList.length);
+		
+		newArr.forEach( item => {
+			item.style.height = 0;
+		})
+	}
+};
 
-let count = 1;
-btnLoadMore.addEventListener('click', showImg);
-
-function showImg() {
-	listGallery[count].nextElementSibling.style.height = '310px';
-	count++;
-	listGallery[count].nextElementSibling.style.height = '310px'
-	count++;
+if (window.innerWidth <= 480) {
+	openMobileGallery();
+} else {
+	openMobileGallery = null;
 }
